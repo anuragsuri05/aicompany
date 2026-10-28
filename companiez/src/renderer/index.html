@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Companiez</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https://api.openai.com https://*.openai.com wss://api.openai.com wss://*.openai.com; media-src 'self' blob: mediastream:;" />
+    <!-- Companiez splash. It paints before the bundled faces (design/fonts.css)
+         load, so it uses system fonts on purpose. Colours are the light-theme
+         tokens: concrete ground, floor-plan grid, cobalt mark. -->
+    <style>
+      #cth-splash {
+        position: fixed; inset: 0; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 14px;
+        background-color: #E8EBEF; color: #131A24;
+        background-image:
+          linear-gradient(rgba(51, 102, 255, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(51, 102, 255, 0.06) 1px, transparent 1px);
+        background-size: 24px 24px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+      #cth-splash .mk {
+        display: grid; place-items: center; width: 56px; height: 56px;
+        border-radius: 14px; background: #3366FF; color: #FFFFFF;
+        font-weight: 800; font-size: 20px; letter-spacing: 0.02em;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 4px 0 #1F47C7, 0 14px 24px -10px rgba(19,26,36,0.45);
+      }
+      #cth-splash .title { font-weight: 800; font-size: 14px; letter-spacing: 0.32em; }
+      #cth-splash .hint { font-size: 14px; color: #5B6779; }
+      #cth-splash .hint::before {
+        content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 8px;
+        border-radius: 50%; background: #FF6B2C; box-shadow: 0 0 8px rgba(255,107,44,0.8);
+        vertical-align: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="cth-splash">
+        <div class="mk">CZ</div>
+        <div class="title">COMPANIEZ</div>
+        <div class="hint">Opening the office…</div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>

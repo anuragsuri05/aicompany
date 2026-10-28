@@ -1,0 +1,42 @@
+/* Self-hosted typography — Companiez.
+ *
+ * Fonts ship inside the bundle: a desktop app should not need the network to
+ * render its own type (fonts.googleapis.com is also blocked in mainland China).
+ * Latin subsets, all variable, ~113KB for the three. CJK and Arabic are NOT
+ * bundled; the token stacks in tokens.css fall back to the system faces.
+ *
+ *   Big Shoulders Text — the DISPLAY face: a condensed civic-signage family drawn
+ *     for Chicago's wayfinding. Every small-caps label in the app reads like a
+ *     sign on an office floor. It replaces upstream's Press Start 2P, which the
+ *     UI calls at 8-9px; Big Shoulders' caps are shorter, so `size-adjust` scales
+ *     the face once here instead of resizing 115 call sites.
+ *   IBM Plex Sans — the UI face: corporate heritage, engineered for dense UI.
+ *   JetBrains Mono — terminals and code, unchanged (xterm metrics depend on it).
+ *
+ * Vite fingerprints and inlines these URLs at build time, so the paths below are
+ * source paths, not runtime ones. */
+
+@font-face {
+  font-family: 'Big Shoulders Text';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  size-adjust: 135%;
+  src: url('../assets/fonts/big-shoulders-text-latin-var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url('../assets/fonts/ibm-plex-sans-latin-var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../assets/fonts/jetbrains-mono-latin-var.woff2') format('woff2');
+}

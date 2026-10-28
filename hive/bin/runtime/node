@@ -1,0 +1,2 @@
+#!/bin/sh
+ELECTRON_RUN_AS_NODE=1 exec "/Users/lakshsharma/Downloads/100 projects/aicompany/munder-difflin/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron" "$@"

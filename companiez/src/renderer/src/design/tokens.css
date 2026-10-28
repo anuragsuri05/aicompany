@@ -1,0 +1,168 @@
+/* Design tokens — mirrors tokens.ts. Update both together.
+ *
+ * COMPANIEZ — "the office that never closes". The identity comes from a
+ * building, not from arcade paper: cool concrete and plaster surfaces, graphite
+ * ink, one signal-orange "lamp on" accent, cobalt for the brand. Token NAMES are
+ * upstream's (cream/paper/ink/lemon…) so every component restyles without edits;
+ * read `cream` as "surface" and `lemon` as "signal".
+ */
+:root {
+  /* Surfaces — Concrete (ground) → Plaster (panels) → Steel (pressed/strong) */
+  --cth-cream-50:  #E8EBEF;
+  --cth-cream-100: #F3F5F7;
+  --cth-cream-200: #E1E5EB;
+  --cth-cream-300: #CDD3DC;
+  --cth-paper-100: #FAFBFC;   /* cards, inputs, terminals */
+  --cth-paper-200: #EBEEF2;
+
+  /* Ink — Graphite ramp */
+  --cth-ink-900: #131A24;
+  --cth-ink-700: #2E3A4B;
+  --cth-ink-500: #5B6779;
+  --cth-ink-300: #7D889B;     /* borders — every control's edge */
+  --cth-ink-100: #D2D8E1;     /* dividers that recede */
+
+  /* Brand + signal. `lemon` was upstream's yellow highlight (selected tab,
+     switches that are on); in Companiez it is SIGNAL ORANGE, the colour of a lamp left on. */
+  --cth-brand:       #3366FF;
+  --cth-brand-light: #DCE5FF;
+
+  --cth-coral: #EE5A5F;       --cth-coral-light: #FBDADB;
+  --cth-mint:  #2FA37A;       --cth-mint-light:  #D0EEE1;
+  --cth-sky:   #2F8FD8;       --cth-sky-light:   #D4E7F8;
+  --cth-lemon: #FF6B2C;       --cth-lemon-light: #FFE1D2;
+  --cth-lilac: #8B7DF6;       --cth-lilac-light: #E3DFFD;
+  --cth-peach: #E8A33D;       --cth-peach-light: #F9E6C5;
+
+  /* Status — working is the lamp; everything else keeps its hue meaning */
+  --cth-status-idle:     #8D97A8;
+  --cth-status-thinking: #2F8FD8;
+  --cth-status-working:  #FF6B2C;
+  --cth-status-waiting:  #6D7CF2;
+  --cth-status-blocked:  #EE5A5F;
+  --cth-status-success:  #2FA37A;
+  --cth-status-ghost:    #D2D8E1;
+  --cth-status-compacting: #8B7DF6;
+  --cth-status-looping:    #E8A33D;
+  --cth-status-typing:     #E58A2E;
+
+
+  /* Spacing */
+  --cth-space-0: 0px;
+  --cth-space-1: 4px;
+  --cth-space-2: 8px;
+  --cth-space-3: 12px;
+  --cth-space-4: 16px;
+  --cth-space-5: 24px;
+  --cth-space-6: 32px;
+  --cth-space-7: 48px;
+  --cth-space-8: 64px;
+
+  /* Shape — upstream was square hairline boxes; Companiez is softly machined */
+  --cth-radius-sm: 5px;
+  --cth-radius-md: 8px;
+  --cth-radius-lg: 12px;
+
+  /* Type — Big Shoulders Text (signage labels), IBM Plex Sans (everything you
+     read), JetBrains Mono (terminals). See fonts.css. CJK and Arabic text in
+     any slot falls through to a system face rather than to a generic family. */
+  --cth-font-display: "Big Shoulders Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Geeza Pro", "Noto Naskh Arabic", "Segoe UI Historic", sans-serif;
+  --cth-font-ui:      "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Geeza Pro", "Noto Naskh Arabic", "Segoe UI Historic", sans-serif;
+  --cth-font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", "Noto Sans CJK SC", "Geeza Pro", "Noto Naskh Arabic", "Segoe UI Historic", monospace;
+
+  /* Type scale */
+  --cth-text-display-lg: 16px;
+  --cth-text-display-md: 12px;
+  --cth-text-display-sm: 8px;
+  --cth-text-body-lg:    16px;
+  --cth-text-body-md:    14px;
+  --cth-text-body-sm:    13px;
+  --cth-text-mono-md:    14px;
+  --cth-text-mono-sm:    13px;
+
+  /* Line heights — integer multiples */
+  --cth-lh-display-lg: 24px;
+  --cth-lh-display-md: 20px;
+  --cth-lh-display-sm: 12px;
+  --cth-lh-body-lg:    24px;
+  --cth-lh-body-md:    20px;
+  --cth-lh-body-sm:    18px;
+  --cth-lh-mono:       20px;
+
+  --cth-shadow-hard: 0 6px 16px -6px rgba(19, 26, 36, 0.28);
+
+  /* Panel edges — single hairlines; dialogs one step stronger */
+  --cth-panel-border:          inset 0 0 0 1px var(--cth-ink-300);
+  /* Text that sits ON an accent fill (a selected tab, a filled chip). Accents
+     are mid-luminance in BOTH themes, so this is graphite in both. */
+  --cth-on-accent: #131A24;
+
+  --cth-panel-border-inset:    inset 0 0 0 1px var(--cth-ink-100);
+  --cth-panel-border-terminal: inset 0 0 0 1px var(--cth-ink-300);
+  --cth-panel-border-dialog:   inset 0 0 0 1px var(--cth-ink-500);
+
+  /* 2.5D depth. Light comes from the top-left, as it does on the office floor
+     (scene/office/depth.ts): surfaces catch a highlight on their top edge and
+     drop a soft shadow down-right. */
+  --cth-depth-highlight: rgba(255, 255, 255, 0.7);
+  --cth-depth-drop:      0 4px 8px -2px rgba(19, 26, 36, 0.20);
+  --cth-depth-drop-hover: 0 8px 14px -4px rgba(19, 26, 36, 0.26);
+  --cth-depth-panel:     inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 1px 0 rgba(19, 26, 36, 0.05), 0 12px 26px -14px rgba(19, 26, 36, 0.34);
+  --cth-depth-well:      inset 0 2px 4px rgba(19, 26, 36, 0.09);
+}
+
+/* ── Dark theme: "after hours" ───────────────────────────────────────────────
+   One token swap darkens the WHOLE app (design/theme.ts stamps data-cth-theme
+   on <html>). Blue-black building at night, never pure black; text is a cool
+   off-white, never #FFF. Contrast floors kept from upstream's audit: body text
+   >= 4.5:1 on every surface, structural borders (ink-300) >= 3:1, dividers
+   (ink-100) deliberately quieter. */
+:root[data-cth-theme='dark'] {
+  --cth-cream-50:  #0D1117;   /* app ground */
+  --cth-cream-100: #131922;
+  --cth-cream-200: #1A222D;
+  --cth-cream-300: #242E3B;
+  --cth-paper-100: #10151D;   /* cards, inputs, terminals */
+  --cth-paper-200: #171E28;
+
+  --cth-ink-900: #E3E8EF;
+  --cth-ink-700: #B4BDCA;
+  --cth-ink-500: #8D97A6;
+  --cth-ink-300: #6B7686;     /* BORDERS — must stay >= 3:1 */
+  --cth-ink-100: #2A3340;
+
+  --cth-brand:       #6E8CFF;
+  --cth-brand-light: #1B2546;
+
+  --cth-coral: #F2777A;       --cth-mint:  #4CC99A;
+  --cth-sky:   #5AA9EC;       --cth-lemon: #FF8A50;
+  --cth-lilac: #9D90FF;       --cth-peach: #F0B65C;
+
+  /* "-light" fills double as chip/selection grounds — deep, so ink-900 reads on top */
+  --cth-coral-light: #3A1F23;
+  --cth-mint-light:  #15322A;
+  --cth-sky-light:   #16283A;
+  --cth-lemon-light: #3A2216;
+  --cth-lilac-light: #262447;
+  --cth-peach-light: #362A16;
+
+  --cth-status-idle:     #6B7686;
+  --cth-status-thinking: #5AA9EC;
+  --cth-status-working:  #FF8A50;
+  --cth-status-waiting:  #8C98FF;
+  --cth-status-blocked:  #F2777A;
+  --cth-status-success:  #4CC99A;
+  --cth-status-ghost:    #4A5463;
+  --cth-status-compacting: #9D90FF;
+  --cth-status-looping:    #F0B65C;
+  --cth-status-typing:     #F29A4A;
+
+
+  --cth-shadow-hard: 0 8px 20px -6px rgba(0, 0, 0, 0.6);
+
+  --cth-depth-highlight: rgba(255, 255, 255, 0.07);
+  --cth-depth-drop:      0 4px 10px -2px rgba(0, 0, 0, 0.55);
+  --cth-depth-drop-hover: 0 8px 16px -4px rgba(0, 0, 0, 0.6);
+  --cth-depth-panel:     inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.4), 0 14px 28px -14px rgba(0, 0, 0, 0.8);
+  --cth-depth-well:      inset 0 2px 5px rgba(0, 0, 0, 0.45);
+}

@@ -1,0 +1,19 @@
+{
+  "godId": "god",
+  "agents": {
+    "god": {
+      "id": "god",
+      "name": "Michael",
+      "provider": "claude",
+      "cwd": "/Users/lakshsharma/Downloads/100 projects/aicompany",
+      "isGod": true,
+      "role": "orchestrator (god)",
+      "capabilities": [],
+      "status": "idle",
+      "cwdValid": true,
+      "archived": false,
+      "lastSeen": 1792879266516,
+      "sessionId": "ed78adad-000b-4d1e-ae94-727dfb1be979"
+    }
+  }
+}

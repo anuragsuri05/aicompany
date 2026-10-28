@@ -1,0 +1,22 @@
+{"ts":1792879261457,"kind":"app-start","version":"0.4.6","packaged":false,"appPath":"/Users/lakshsharma/Downloads/100 projects/aicompany/munder-difflin","exePath":"/Users/lakshsharma/Downloads/100 projects/aicompany/munder-difflin/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron","electron":"32.3.3","platform":"darwin"}
+{"ts":1792879261468,"kind":"hooks","state":"listening","path":"/Users/lakshsharma/Downloads/100 projects/aicompany/hive/hooks.sock"}
+{"ts":1792879261471,"kind":"drop","reason":"no-inbox","from":"scheduler","to":"god","id":"2026-10-24T22-01-01-469Z-551007"}
+{"ts":1792879261471,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-24T22-01-01-469Z-551007","delivered":[]}
+{"ts":1792879262780,"kind":"spawn","agentId":"god","name":"Michael","isGod":true}
+{"ts":1792879266517,"kind":"session","agentId":"god","sessionId":"ed78adad-000b-4d1e-ae94-727dfb1be979"}
+{"ts":1793130067619,"kind":"app-start","version":"0.4.6","packaged":false,"appPath":"/Users/lakshsharma/Downloads/100 projects/aicompany/munder-difflin","exePath":"/Users/lakshsharma/Downloads/100 projects/aicompany/munder-difflin/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron","electron":"32.3.3","platform":"darwin"}
+{"ts":1793130067967,"kind":"hooks","state":"listening","path":"/Users/lakshsharma/Downloads/100 projects/aicompany/hive/hooks.sock"}
+{"ts":1793130067992,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-27T19-41-07-987Z-f4f850","delivered":["god"]}
+{"ts":1793130174552,"kind":"app-start","version":"0.4.6","packaged":false,"appPath":"/Users/lakshsharma/Downloads/100 projects/aicompany/munder-difflin","exePath":"/Users/lakshsharma/Downloads/100 projects/aicompany/munder-difflin/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron","electron":"32.3.3","platform":"darwin"}
+{"ts":1793130174823,"kind":"hooks","state":"listening","path":"/Users/lakshsharma/Downloads/100 projects/aicompany/hive/hooks.sock"}
+{"ts":1793133668273,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-27T20-41-08-229Z-6a6c43","delivered":["god"]}
+{"ts":1793137268547,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-27T21-41-08-518Z-6ad169","delivered":["god"]}
+{"ts":1793140868751,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-27T22-41-08-726Z-168584","delivered":["god"]}
+{"ts":1793144468812,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-27T23-41-08-790Z-165301","delivered":["god"]}
+{"ts":1793148068907,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-28T00-41-08-878Z-f37526","delivered":["god"]}
+{"ts":1793155597408,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-28T02-46-37-354Z-cbb5bd","delivered":["god"]}
+{"ts":1793159259825,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-28T03-47-39-658Z-a52477","delivered":["god"]}
+{"ts":1793162924850,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-28T04-48-44-825Z-bb9afe","delivered":["god"]}
+{"ts":1793166587428,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-28T05-49-47-419Z-534d7e","delivered":["god"]}
+{"ts":1793170249506,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-28T06-50-49-501Z-fea4e0","delivered":["god"]}
+{"ts":1793173911697,"kind":"message","from":"scheduler","to":"god","act":"request","subject":"Hourly ops standup","id":"2026-10-28T07-51-51-558Z-144a5b","delivered":["god"]}
